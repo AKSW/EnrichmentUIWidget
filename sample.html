@@ -17,6 +17,8 @@
 	<div id="enrichment-container"></div>
 	<script type="text/javascript">
 		$("#enrichment-container").enrichment();
+		$("#enrichment-container").enrichment('option', 'service_url', 'http://localhost:8080/enrichment/Enrichment');
+		$("#enrichment-container").enrichment('option', 'endpoint', {url:'http://dbpedia.org/sparql', graph:'http://dbpedia.org'});
 	</script>
 </body>
 </html>
