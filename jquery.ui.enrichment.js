@@ -130,6 +130,11 @@
 			var resource_uri = $('#resource_uri');
 			var use_inference = $('#use_inference');
 			var threshold = $('#threshold');
+			var default_graph_uri = this.options.endpoint.graph;
+			var graph_defined = true;
+			if(typeof(default_graph_uri) === 'undefined'){
+				graph_defined = false;
+			}
 
 			var data = 'endpoint_url=' + this.options.endpoint.url + '&default_graph_uri=' + this.options.endpoint.graph + '&resource_uri='
 					+ resource_uri.val() + '&use_inference=' + use_inference.val() + '&threshold='
