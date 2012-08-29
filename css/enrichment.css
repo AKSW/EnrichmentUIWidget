@@ -1,0 +1,35 @@
+#parameters {
+	float: left;
+	background-color: #efefef;
+	width: 30%;
+}
+
+#results {
+	float: right;
+	background-color: #cfcfcf;
+	width: 70%;
+}
+
+#threshold {
+	width: 80%;
+}
+
+#resource_uri {
+	width: 80%;
+}
+
+.axiom_types_table {
+	border: 1px solid #333333;
+}
+
+.axiom_types_table tr:nth-child(even) {
+	background-color: #cecece;
+}
+
+.axiom_types_table tr:nth-child(odd) {
+	background-color: #efefef;
+}
+
+.axioms_table {
+	width: 80%;
+}

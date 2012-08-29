@@ -1,0 +1,257 @@
+<div id="parameters">
+	<form id="options" class="form-horizontal">
+		<div>
+			<label for="resource_uri">Resource URI </label> <input id="resource_uri" class="easyui-validatebox"
+				data-options="required:true,validType:'url'" placeholder="http://dbpedia.org/ontology/Bridge"
+				value="http://dbpedia.org/ontology/Bridge" />
+		</div>
+		<div>
+			<fieldset id="entity_type">
+				<legend>Entity Type</legend>
+
+				<label for="autodetect">Autodetect</label> <input type="checkbox" id="autodetect" name="autodetect" checked="true" />
+				<br /> <label for="class">Class</label> <input type="radio" name="type" id="class" value="class" checked="true" />
+				<label for="object_property">Object Property</label> <input type="radio" name="type" id="object_property"
+					value="object_property" checked="false" /> <label for="data_property">Data Property</label> <input type="radio"
+					name="type" id="data_property" value="data_property" checked="false" />
+			</fieldset>
+		</div>
+
+		<div>
+			<label for="use_inference">Use Inference</label> <input type="checkbox" id="use_inference" name="use_inference" />
+		</div>
+
+		<div>
+			<label for="threshold">Threshold</label> <input name="threshold" class="easyui-slider" value="75"
+				style="width: 300px" data-options="showTip:true,rule:[0,'|',25,'|',50,'|',75,'|',100]" id="threshold" />
+		</div>
+
+		<div>
+			<label for="max_execution_time">Max. Execution Time</label> <input id="max_execution_time" name="max_execution_time"
+				class="easyui-numberspinner" style="width: 80px;" required="required" data-options="min:0,max:100,editable:false"
+				value="10">
+		</div>
+
+		<div id="axiom_types">
+			<table id="all_axiom_types_table" class="axiom_types_table">
+				<thead>
+					<tr>
+						<td><input type="checkbox" id="chckHead"></td>
+						<td>Axiom Type</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="DisjointClasses"></td>
+						<td>DisjointClasses</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="SubClassOf"></td>
+						<td>SubClassOf</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="EquivalentClasses"></td>
+						<td>EquivalentClasses</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="DisjointObjectProperties"></td>
+						<td>DisjointObjectProperties</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="EquivalentObjectProperties"></td>
+						<td>EquivalentObjectProperties</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="SubObjectPropertyOf"></td>
+						<td>SubObjectPropertyOf</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="ObjectPropertyDomain"></td>
+						<td>ObjectPropertyDomain</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="ObjectPropertyRange"></td>
+						<td>ObjectPropertyRange</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="FunctionalObjectProperty"></td>
+						<td>FunctionalObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="InverseFunctionalObjectProperty"></td>
+						<td>InverseFunctionalObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="SymmetricObjectProperty"></td>
+						<td>SymmetricObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="AsymmetricObjectProperty"></td>
+						<td>AsymmetricObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="TransitiveObjectProperty"></td>
+						<td>TransitiveObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="ReflexiveObjectProperty"></td>
+						<td>ReflexiveObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="IrrefexiveObjectProperty"></td>
+						<td>IrrefexiveObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="DisjointDataProperties"></td>
+						<td>DisjointDataProperties</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="EquivalentDataProperties"></td>
+						<td>EquivalentDataProperties</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="FunctionalDataProperty"></td>
+						<td>FunctionalDataProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="DataPropertyDomain"></td>
+						<td>DataPropertyDomain</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="DataPropertyRange"></td>
+						<td>DataPropertyRange</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="SubDataPropertyOf"></td>
+						<td>SubDataPropertyOf</td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="class_axiom_types_table" class="axiom_types_table" style="display: none">
+				<thead>
+					<tr>
+						<td><input type="checkbox" id="chckHead"></td>
+						<td>Axiom Type</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="DisjointClasses"></td>
+						<td>DisjointClasses</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="SubClassOf"></td>
+						<td>SubClassOf</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="EquivalentClasses"></td>
+						<td>EquivalentClasses</td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="objectproperty_axiom_types_table" class="axiom_types_table" style="display: none">
+				<thead>
+					<tr>
+						<td><input type="checkbox" id="chckHead"></td>
+						<td>Axiom Type</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="DisjointObjectProperties"></td>
+						<td>DisjointObjectProperties</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="EquivalentObjectProperties"></td>
+						<td>EquivalentObjectProperties</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="SubObjectPropertyOf"></td>
+						<td>SubObjectPropertyOf</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="ObjectPropertyDomain"></td>
+						<td>ObjectPropertyDomain</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="ObjectPropertyRange"></td>
+						<td>ObjectPropertyRange</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="FunctionalObjectProperty"></td>
+						<td>FunctionalObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="InverseFunctionalObjectProperty"></td>
+						<td>InverseFunctionalObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="SymmetricObjectProperty"></td>
+						<td>SymmetricObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="AsymmetricObjectProperty"></td>
+						<td>AsymmetricObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="TransitiveObjectProperty"></td>
+						<td>TransitiveObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="ReflexiveObjectProperty"></td>
+						<td>ReflexiveObjectProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="IrrefexiveObjectProperty"></td>
+						<td>IrrefexiveObjectProperty</td>
+					</tr>
+				</tbody>
+			</table>
+			<table id="dataproperty_axiom_types_table" class="axiom_types_table" style="display: none">
+				<thead>
+					<tr>
+						<td><input type="checkbox" id="chckHead"></td>
+						<td>Axiom Type</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="DisjointDataProperties"></td>
+						<td>DisjointDataProperties</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="EquivalentDataProperties"></td>
+						<td>EquivalentDataProperties</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="FunctionalDataProperty"></td>
+						<td>FunctionalDataProperty</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="DataPropertyDomain"></td>
+						<td>DataPropertyDomain</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="DataPropertyRange"></td>
+						<td>DataPropertyRange</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" class="chcktbl" value="SubDataPropertyOf"></td>
+						<td>SubDataPropertyOf</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div align="center">
+			<input type="submit" value="Run" id="start_button" />
+		</div>
+	</form>
+
+</div>
+
+<div id="results_view">
+	<div id="sparul_dialog"></div>
+	<div id="results"></div>
+	<button id="sparul">Dump as SPARUL</button>
+</div>
