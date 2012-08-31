@@ -1,7 +1,7 @@
 EnrichmentUIWidget
 ==================
 
-The Knowledge Base Enrichment User Interface is implemented as jQuery widget and also makes use of the JavaScript library jQuery EasyUI for some graphical components. The underlying learning algorithms are part of the DL-Learner Framework and called via AJAX requests to a Java Servlet which must be deployed on an accessible server.
+The Knowledge Base Enrichment User Interface is implemented as jQuery widget and also makes use of the JavaScript library jQuery EasyUI for some graphical components. The underlying learning algorithms are part of the [DL-Learner Framework](http://dl-learner.org/) and called via AJAX requests to a Java Servlet which must be deployed on an accessible server.
 In order to use the widget in other web projects the following parameters have to be specified:
 
 * **SPARQL endpoint URL:** The URL of the SPARQL endpoint and optionally the default graph URL on which the enrichment algorithms will be executed.
