@@ -4,8 +4,8 @@ EnrichmentUIWidget
 The Knowledge Base Enrichment User Interface is implemented as jQuery widget and also makes use of the JavaScript library jQuery EasyUI for some graphical components. The underlying learning algorithms are part of the DL-Learner Framework and called via AJAX requests to a Java Servlet which must be deployed on an accessible server.
 In order to use the widget in other web projects the following parameters have to be specified:
 
-* <b>SPARQL endpoint URL</b>: The URL of the SPARQL endpoint and optionally the default graph URL on which the enrichment algorithms will be executed.
-* <b>Service URL</b>: Declares the URL of the Java Servlet which is called to execute the corresponding learning algorithms.
+* **SPARQL endpoint URL:** The URL of the SPARQL endpoint and optionally the default graph URL on which the enrichment algorithms will be executed.
+* **Service URL:** Declares the URL of the Java Servlet which is called to execute the corresponding learning algorithms.
 
 Integration into HTML page:
 ---------------------------
@@ -48,4 +48,18 @@ call the jQuery plugin on it using $("<b>ID</b>").enrichment() and set the param
           }
       });
     </script>
+
+Configuration Parameters
+------------------------
+
+The enrichment user interfaces allows to configure the following parameters which affect the axiom learning
+process:
+    
+* **Resource URI** is used to specify the resource (property or class) which should be enriched.
+* **Resource Type** allows to determine of which type of entity the resource is. This implicitly works as a filter on the allowed and executed learning algorithms.
+* **Inference** allows to turn inference on or off. If it is turned on, in a preprocessing step the class hierarchy is computed. Powerful reasoning capabilities may improve the quality of suggestions, in particular for those axioms, which rely on knowing the class hierarchy of the knowledge base, e.g. domain and range axioms.
+* **Max. execution time** specifies the maximum execution time in seconds for each algorithm run.
+* **Max. returned axioms** specifies the maximum number of returned axioms per axiom type.
+* **Threshold** allows to specify a threshold for enrichment suggestions, i.e. suggestions with a lower score will be omitted.
+* **Axiom Types** is used to choose for which type of axioms the learning algorithm will be executed.
 
