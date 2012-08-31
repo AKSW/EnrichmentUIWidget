@@ -17,7 +17,8 @@ cp enrichment.war /PATH/TO/TOMCAT6/webapps/
 </code></pre>
 
 Link to the necessary JavaScript and CSS files into your project
-<pre><
+HTML:
+
 <html>
 <head>
   ...
@@ -34,11 +35,16 @@ Link to the necessary JavaScript and CSS files into your project
 </head>
 ...
 
-</pre>
 
-Create a container element with an <b>ID</b>, call the jQuery plugin on it using $("<b>ID</b>").enrichment() and set the parameters for the SPARQL endpoint URL and the Java Servlet URL, e.g.
-<pre><code>
+Create a container element with an <b>ID</b>, 
+HTML:
+
 <div id="enrichment-container"></div>
+
+, call the jQuery plugin on it using $("<b>ID</b>").enrichment() and set the parameters for the SPARQL endpoint URL and the Java Servlet URL, e.g.
+
+JavaScript:
+
 <script type="text/javascript">
     $("#enrichment-container").enrichment({
       'service_url':'http://localhost:8080/enrichment/Enrichment',
@@ -48,4 +54,4 @@ Create a container element with an <b>ID</b>, call the jQuery plugin on it using
       }
   });
 </script>
-</code></pre>
+
