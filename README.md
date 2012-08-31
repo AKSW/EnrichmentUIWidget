@@ -11,13 +11,13 @@ Integration into HTML page:
 ---------------------------
 
 Put the war file enrichment.war on a Java Servlet container, e.g. for Tomcat 6 it would be
-<code>
+<pre><code>
 cd EnrichmentUIWidget
 cp enrichment.war /PATH/TO/TOMCAT6/webapps/
-</code>
+</code></pre>
 
 Link to the necessary JavaScript and CSS files into your project
-<code>
+<pre><code>
 <html>
 <head>
   ...
@@ -34,9 +34,10 @@ Link to the necessary JavaScript and CSS files into your project
 </head>
 ...
 </code>
+</pre>
 
 Create a container element with an <b>ID</b>, call the jQuery plugin on it using $("<b>ID</b>").enrichment() and set the parameters for the SPARQL endpoint URL and the Java Servlet URL, e.g.
-\begin{lstlisting}
+<pre><code>
 <div id="enrichment-container"></div>
 <script type="text/javascript">
     $("#enrichment-container").enrichment({
@@ -47,4 +48,4 @@ Create a container element with an <b>ID</b>, call the jQuery plugin on it using
       }
   });
 </script>
-\end{lstlisting}
+</code></pre>
