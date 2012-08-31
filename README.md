@@ -11,10 +11,9 @@ Integration into HTML page:
 ---------------------------
 
 Put the war file enrichment.war on a Java Servlet container, e.g. for Tomcat 6 it would be
-<pre><code>
-cd EnrichmentUIWidget
-cp enrichment.war /PATH/TO/TOMCAT6/webapps/
-</code></pre>
+
+    cd EnrichmentUIWidget
+    cp enrichment.war /PATH/TO/TOMCAT6/webapps/
 
 Link to the necessary JavaScript and CSS files into your project
 
