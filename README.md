@@ -4,8 +4,8 @@ EnrichmentUIWidget
 The Knowledge Base Enrichment User Interface is implemented as jQuery widget and also makes use of the JavaScript library jQuery EasyUI for some graphical components. The underlying learning algorithms are part of the DL-Learner Framework and called via AJAX requests to a Java Servlet which must be deployed on an accessible server.
 In order to use the widget in other web projects the following parameters have to be specified:
 
-SPARQL endpoint URL: The URL of the SPARQL endpoint and optionally the default graph URL on which the enrichment algorithms will be executed.
-Service URL Declares the URL of the Java Servlet which is called to execute the corresponding learning algorithms.
+* <b>SPARQL endpoint URL</b>: The URL of the SPARQL endpoint and optionally the default graph URL on which the enrichment algorithms will be executed.
+* <b>Service URL</b>: Declares the URL of the Java Servlet which is called to execute the corresponding learning algorithms.
 
 Integration into HTML page:
 ---------------------------
@@ -17,7 +17,7 @@ cp enrichment.war /PATH/TO/TOMCAT6/webapps/
 </code></pre>
 
 Link to the necessary JavaScript and CSS files into your project
-<pre><code>
+<pre><
 <html>
 <head>
   ...
@@ -33,7 +33,7 @@ Link to the necessary JavaScript and CSS files into your project
   <link rel="stylesheet" type="text/css" href="css/enrichment.css"></link>
 </head>
 ...
-</code>
+
 </pre>
 
 Create a container element with an <b>ID</b>, call the jQuery plugin on it using $("<b>ID</b>").enrichment() and set the parameters for the SPARQL endpoint URL and the Java Servlet URL, e.g.
