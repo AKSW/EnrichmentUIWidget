@@ -17,41 +17,36 @@ cp enrichment.war /PATH/TO/TOMCAT6/webapps/
 </code></pre>
 
 Link to the necessary JavaScript and CSS files into your project
-HTML:
 
-<html>
-<head>
-  ...
-  ...
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
-  <script type="text/javascript" src="jquery.ui.enrichment.js"></script>
-  <link rel="stylesheet" type="text/css" 
-      href="css/ui-darkness/jquery-ui-1.8.22.custom.css"></link>
-  <link rel="stylesheet" type="text/css" href="css/default/easyui.css"></link>
-  <link rel="stylesheet" type="text/css" href="css/icon.css"></link>
-  <link rel="stylesheet" type="text/css" href="css/enrichment.css"></link>
-</head>
-...
+    <html>
+    <head>
+      ...
+      ...
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+      <script type="text/javascript" src="jquery.ui.enrichment.js"></script>
+      <link rel="stylesheet" type="text/css" 
+          href="css/ui-darkness/jquery-ui-1.8.22.custom.css"></link>
+      <link rel="stylesheet" type="text/css" href="css/default/easyui.css"></link>
+      <link rel="stylesheet" type="text/css" href="css/icon.css"></link>
+      <link rel="stylesheet" type="text/css" href="css/enrichment.css"></link>
+    </head>
+    ...
 
+Create a container element with an <b>ID</b> 
 
-Create a container element with an <b>ID</b>, 
-HTML:
+    <div id="enrichment-container"></div>
 
-<div id="enrichment-container"></div>
+call the jQuery plugin on it using $("<b>ID</b>").enrichment() and set the parameters for the SPARQL endpoint URL and the Java Servlet URL, e.g.
 
-, call the jQuery plugin on it using $("<b>ID</b>").enrichment() and set the parameters for the SPARQL endpoint URL and the Java Servlet URL, e.g.
-
-JavaScript:
-
-<script type="text/javascript">
-    $("#enrichment-container").enrichment({
-      'service_url':'http://localhost:8080/enrichment/Enrichment',
-      'endpoint': {
-        'url': 'http://dbpedia.org/sparql',
-        'graph': 'http://dbpedia.org'
-      }
-  });
-</script>
+    <script type="text/javascript">
+        $("#enrichment-container").enrichment({
+          'service_url':'http://localhost:8080/enrichment/Enrichment',
+          'endpoint': {
+            'url': 'http://dbpedia.org/sparql',
+            'graph': 'http://dbpedia.org'
+          }
+      });
+    </script>
 
